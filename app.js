@@ -4,13 +4,13 @@ const express = require('express');
 const app = express();
 
 
-
 /* aktiver serverside console.log af side indlæsninger. 
  * Dette sættes op så vi kan følge med i hvilke HTML filer 
  * og ROUTES der forsøges at blive indlæst */
 const logger = require('morgan');
 app.use(logger('dev', {
    // hvis ALLE requests skal ses i loggen, udkommenter næste linje
+   // den udelader log af html-filer og ?????
    skip: req => (!req.url.endsWith(".html") && req.url.indexOf('.') > -1)
 }));
 

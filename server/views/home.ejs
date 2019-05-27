@@ -1,0 +1,36 @@
+<!-- MAN SKAL HUSKE DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- HER PLACERES MIT INCLUDE AF STYLES.JS -->
+    <%- include('partials/styles.ejs') %>
+    <!-- <title>Document</title> -->
+    <title> 
+        <!-- invalid left-hand assignment -->
+        <%- include('partials/head.ejs') %> 
+    <title/>
+
+</head>
+
+<body>
+    <header class="header"> Header </header>
+    <nav class="nav">
+        <ul class="menulist">
+            <li class="menu-tab">Home</li>
+            <li class="menu-tab">Contact</li>
+            <li class="menu-tab">Product</li>
+        </ul>
+    </nav>
+    <main class="main">MAIN</main>
+
+    <footer class="footer"> Footer 
+        <%- include('partials/footer.ejs') %>
+    </footer>
+    
+    <!-- HER PLACERES MIT INCLUDE AF SCRIPT.JS -->
+    <%- include('partials/scripts.ejs') %>
+</body>
+</html>
